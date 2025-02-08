@@ -1,21 +1,4 @@
 
-// import { initializeApp } from "firebase/app";
-// import {getAuth,GoogleAuthProvider} from "firebase/auth";
-// import { getFirestore } from "firebase/firestore";
-// const firebaseConfig = {
-//   apiKey: "AIzaSyAv4YJC00PvMS228MjEA9cgCCeXovlzbWM",
-//   authDomain: "fir-course-e93b7.firebaseapp.com",
-//   projectId: "fir-course-e93b7",
-//   storageBucket: "fir-course-e93b7.firebasestorage.app",
-//   messagingSenderId: "231510847996",
-//   appId: "1:231510847996:web:edb1fb3fe967e555190279",
-//   measurementId: "G-QP8KMW1FD4"
-// };
-
-// const app = initializeApp(firebaseConfig);
-// export const auth=getAuth(app);
-// export const googleProvider=new GoogleAuthProvider();
-// export const db=getFirestore(app);
 
 
 
@@ -29,14 +12,15 @@ import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAv4YJC00PvMS228MjEA9cgCCeXovlzbWM",
-  authDomain: "fir-course-e93b7.firebaseapp.com",
-  projectId: "fir-course-e93b7",
-  storageBucket: "fir-course-e93b7.firebasestorage.app",
-  messagingSenderId: "231510847996",
-  appId: "1:231510847996:web:edb1fb3fe967e555190279",
-  measurementId: "G-QP8KMW1FD4"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
 };
+
 
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
